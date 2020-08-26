@@ -10,5 +10,7 @@
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
   %body
     %header.header
-      %h1.h-h1 Boards
+      .container
+        %h1.h-h1 Boards
+        = image_tag 'default-avatar.png', class: 'header-icon'
     = yield
