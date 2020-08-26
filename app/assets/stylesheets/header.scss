@@ -1,16 +1,27 @@
 .header{
   border-bottom: 1px solid rgba(0,0,0,0.1);
+
+  .container{
+    position: relative;
+
+    .h-h1{
+      width: 56px;
+      height: 25px;
+      margin:17px 0;
+      font-family: Avenir;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 25px;
+    }
   
-
-  .h-h1{
-    width: 56px;
-    height: 25px;
-    margin:30px 17px;
-    font-family: Avenir;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 25px;
-
+    .header-icon{
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      left: 290px;
+      top:-5px;
+    }
   }
+  
 }
