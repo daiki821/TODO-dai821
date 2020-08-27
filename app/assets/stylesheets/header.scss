@@ -1,8 +1,10 @@
 .header{
   border-bottom: 1px solid rgba(0,0,0,0.1);
-
+  
   .container{
     position: relative;
+    display:flex;
+    justify-content: space-between;
 
     .h-h1{
       width: 56px;
@@ -14,14 +16,43 @@
       font-size: 18px;
       line-height: 25px;
     }
-  
-    .header-icon{
-      position: absolute;
-      width: 40px;
-      height: 40px;
-      left: 290px;
-      top:-5px;
+    .dropdown{
+      position: relative;
+
+      &:hover{
+        .dropdown-content{
+          display: block;
+          background-color:grey;
+          
+        }
+      }
+
+      .header-icon{
+        position: relative;
+        width: 40px;
+        height: 40px;
+        top:5px;
+
+        
+      }
+
+      .dropdown-content {
+        font-weight: normal;
+        display: none;
+        right: 0;
+        position: absolute;
+        background-color: white;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+
+
+      }
+
+
+
     }
+    
   }
   
 }
