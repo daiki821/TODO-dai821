@@ -1,9 +1,4 @@
 .container
-  - if user_signed_in?
-    = link_to 'ログアウト', destroy_user_session_path, data: { method: 'delete'}
-  - else
-    = link_to 'ログイン',  new_user_session_path
-  
-  %p 実装予定
+  = link_to 'board作成', new_board_path	
 
 
