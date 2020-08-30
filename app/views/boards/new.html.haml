@@ -1,3 +1,14 @@
 .container  
-  %h2 New Board
+  %h2.form-title New Board
   = form_with(model: @board, url: boards_path, method: 'post', local: true) do |f|
+    %div
+      = f.label :title, 'Name'
+    %div
+      = f.text_field :title, class:'text'
+    %div
+      = f.label :content, 'Description'
+    %div
+      = f.text_area :content, class: 'text text-a'
+    = f.submit '投稿', class: 'btn' 
+   
+ 

@@ -1,8 +1,9 @@
 @import 'reset';
 @import 'header';
 @import 'user';
-
+@import 'btns';
 
 .container{
+  position: relative;
   margin:0 26px;
 }
