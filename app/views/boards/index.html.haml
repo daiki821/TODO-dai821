@@ -12,9 +12,12 @@
         .edit-icon
           = image_tag 'edit.png', class: 'edit-icon'
       
+  - if user_signed_in?
+    .add-board
+      = link_to("+ Add new board",new_board_path, {class: "add-board-content"})
+  - else
+    %p ログインしてください
 
-  .add-board
-    = link_to("+ Add new board",new_board_path, {class: "add-board-content"})
 
 
 
