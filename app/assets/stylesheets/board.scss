@@ -1,0 +1,89 @@
+
+$board-color:#F4F4F4;
+
+
+
+.board-title{
+  font-family: Avenir;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 36px;
+  margin-top: 30px;
+}
+
+// --------------------
+// 作成されたboardのcss
+// ---------------------
+.board{
+  margin:30px 0;
+  width: 330px;
+  height:161px;
+  background-color:$board-color;
+  border:1px solid rgba(0,0,0,.1);
+  border-radius:10px;
+
+  .board-content{
+    position: relative;
+
+    .board-title{
+      position: absolute;
+      left: 17px;
+      font-family: Avenir;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 25px;
+    }
+
+    .board-content{
+      position: absolute;
+      top: 63px;
+      left:17px;
+      ont-family: Avenir;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 19px;
+      opacity:0.4;
+    }
+
+    .board-icon{
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      left:10px;
+      top: 56px;
+
+    }
+
+    .edit-icon{
+      position: absolute;
+      width: 24px;
+      height: 6px;
+      right:16px;
+      top:20px;
+
+    }
+  }
+}
+
+// ------------------------
+// boardを追加するためのcss
+// -------------------------
+
+
+.add-board{
+  margin:30px 0;
+  width: 330px;
+  height:161px;
+  border:1px dashed rgba(0,0,0,.2);
+  border-radius:10px;
+
+
+  .add-board-content{
+    display:block;
+    text-align: center;
+    line-height:161px;
+  }
+}
