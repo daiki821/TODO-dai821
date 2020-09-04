@@ -1,0 +1,36 @@
+
+.p-image{
+  text-align: center;
+  overflow: hidden;
+  margin:30px 0;
+  border-radius: 300px;
+}
+.p-nickname{
+  font-weight:bold;
+  font-size: 20px;
+  text-align: center;
+}
+.p-gender{
+  font-size: 15px;
+}
+.p-box{
+  text-align: center;
+  margin:20px 50px;
+  
+  display: flex;
+  justify-content: space-between;
+}
+.p-introduction{
+  border: 1px solid rgba(0,0,0,.1);
+  border-radius:10px;
+  padding:10px;
+}
+.p-edit-box{
+  text-align: center;
+  margin:30px 0;
+}
+.p-edit{
+  border:1px solid gray;
+  color:gray;
+  padding:5px;
+}
