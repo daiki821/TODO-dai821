@@ -8,7 +8,7 @@
         .board-content
           = board.content
         .board-icon
-          = image_tag current_user.user_avatar, class: 'board-icon'
+          = image_tag board.user.user_avatar, class: 'board-icon'
         .edit-icon
           = image_tag 'edit.png', class: 'edit-icon'
       
