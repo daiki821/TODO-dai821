@@ -1,0 +1,32 @@
+.container
+  %ul
+    - @profile.errors.full_messages.each do |message|
+      %li
+        = message
+  %h2.title edit
+  = form_with(model: @profile, url: profile_path, method: 'put', local: true) do |f|
+    %div
+      = f.label :nickname, 'ニックネーム', class: 'first-label'
+    %div
+      = f.text_field :nickname, class: 'text text-first'
+    %div
+      = f.label :introduction,'自己紹介', class: 'second-label'
+    %div
+      = f.text_area :introduction, class: 'text text-a'
+    %div
+      = f.label :gender,'性別',class: 'p-third-label'
+    %div
+      = f.select :gender, Profile.genders.keys,{},{class: 'text p-third-text'}
+    %div
+      = f.label :birthday, '生年月日',class: 'p-four-label'
+    %div
+      = f.date_field :birthday, class:'text p-four-text'
+    %div
+      = f.label :subscribed, '通知を受け取る' ,class: 'p-five-label'
+      = f.check_box :subscribed, class:'p-five-text'
+    %div
+      = f.label :avatar, 'アバター', class: 'p-six-label'
+    %div
+      = f.file_field :avatar, class: 'p-six-text'
+    = f.submit '保存', class: 'btn'
+    

@@ -1,5 +1,5 @@
 !!!
-%html
+%htmlf
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title Todo
@@ -13,9 +13,14 @@
       .container
         %h1.h-h1 Boards
         .dropdown
-          = image_tag 'default-avatar.png', class: 'header-icon'
+          - if user_signed_in?
+            = image_tag current_user.user_avatar, class: 'header-icon'
+          - else 
+            = image_tag 'default-avatar.png', class: 'header-icon'
           .dropdown-content
             - if user_signed_in?
+              = link_to 'プロフィール', profile_path
+              %br/
               = link_to 'ログアウト', destroy_user_session_path, data: { method: 'delete'}
             - else
               = link_to 'ログイン',  new_user_session_path 

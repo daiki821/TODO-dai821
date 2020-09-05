@@ -1,0 +1,14 @@
+.container
+  .p-image
+    = image_tag current_user.user_avatar
+  .p-nickname
+    = current_user.nickname
+  .p-box
+    .p-gender
+      = current_user.gender
+    .p-birthday
+      = current_user.age
+  .p-introduction
+    = current_user.introduction
+  .p-edit-box
+    = link_to '編集', edit_profile_path,{class: 'p-edit'}
