@@ -19,7 +19,7 @@ class BoardsController < ApplicationController
   end
 
   def edit
-    @board = current_user.boards.find(params[:id])
+    @board = current_user.boards.find_by(params[:id])
   end
 
   private
