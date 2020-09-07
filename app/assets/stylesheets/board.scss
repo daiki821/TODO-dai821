@@ -23,7 +23,7 @@ $board-color:#F4F4F4;
   border:1px solid rgba(0,0,0,.1);
   border-radius:10px;
 
-  .board-content{
+  .board-content-box{
     position: relative;
 
     .board-title{
@@ -53,17 +53,16 @@ $board-color:#F4F4F4;
       width: 30px;
       height: 30px;
       left:10px;
-      top: 56px;
+      top: 120px;
       border-radius:20px;
 
     }
 
     .edit-icon{
       position: absolute;
-      width: 24px;
       height: 6px;
-      right:16px;
-      top:20px;
+      right:40px;
+      top:40px;
 
     }
   }

@@ -2,22 +2,21 @@
   %h2.board-title All Boards
   - @boards.each do |board|
     .board
-      .board-content
+      .board-content-box
         .board-title
           = board.title
         .board-content
           = board.content
-        .board-icon
+        .board-icon-box
           = image_tag board.user.user_avatar, class: 'board-icon'
-        .edit-icon
-          = image_tag 'edit.png', class: 'edit-icon'
-      
+        - if current_user.boards.exists?(id: board.id)
+          .dropdown
+            = image_tag 'edit.png', class: 'edit-icon' 
+            .dropdown-content-box
+              = link_to '編集', edit_board_path(board), class: 'dropdown-content'
+              = link_to '削除', root_path, class: 'dropdown-content'
   - if user_signed_in?
     .add-board
       = link_to("+ Add new board",new_board_path, {class: "add-board-content"})
   - else
     %p ログインしてください
-
-
-
-

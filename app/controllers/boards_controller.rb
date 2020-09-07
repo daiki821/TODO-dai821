@@ -18,6 +18,20 @@ class BoardsController < ApplicationController
     end
   end
 
+  def edit
+    @board = current_user.boards.find(params[:id])
+  end
+
+  def update
+    @board = current_user.boards.find(params[:id])
+    if @board.update(board_params)
+      redirect_to root_path, notice:'boardを変更しました'
+    else
+      flash.now[:error] = 'boardの変更に失敗しました'
+      render :edit
+    end
+  end
+
   private
   def board_params
     params.require(:board).permit(:title, :content)
