@@ -1,5 +1,5 @@
 class BoardsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, only:[:new, :create, :edit, :update, :destroy]
   def index
     @boards = Board.all
   end
@@ -29,6 +29,13 @@ class BoardsController < ApplicationController
     else
       flash.now[:error] = 'boardの変更に失敗しました'
       render :edit
+    end
+  end
+
+  def destroy
+    board = current_user.boards.find(params[ :id])
+    if board.destroy
+      redirect_to root_path, notice:'boardを削除しました'
     end
   end
 
