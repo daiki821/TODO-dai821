@@ -5,7 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :boards, dependent: :destroy
+  has_many :tasks, dependent: :destroy
   has_one :profile, dependent: :destroy
+
 
   delegate :age, :gender,:birthday, to: :profile, allow_nil: true
 
