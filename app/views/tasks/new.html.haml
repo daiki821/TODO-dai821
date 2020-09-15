@@ -4,7 +4,7 @@
       %li
         = message
   %h2.title New Card
-  = form_with(model: @task, url: board_tasks_path, method: 'post', local: true) do |f|
+  = form_with(model: @task, url: board_tasks_path(@task.board), method: 'post', local: true) do |f|
     %div
       = f.label :title, 'Name',class: 'first-label'
     %div
