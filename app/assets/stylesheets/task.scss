@@ -1,0 +1,88 @@
+$board-color:#F4F4F4;
+
+
+
+.task-title{
+  font-family: Avenir;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 36px;
+  margin-top: 30px;
+}
+
+// --------------------
+// 作成されたtaskのcss
+// ---------------------
+.task{
+  margin:30px 0;
+  width: 330px;
+  height:161px;
+  background-color:$board-color;
+  border:1px solid rgba(0,0,0,.1);
+  border-radius:10px;
+
+  .task-content-box{
+    position: relative;
+
+    .task-title{
+      position: absolute;
+      left: 17px;
+      font-family: Avenir;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 25px;
+    }
+
+    .task-content{
+      position: absolute;
+      top: 63px;
+      left:17px;
+      font-family: Avenir;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 19px;
+      opacity:0.4;
+    }
+
+    .task-icon{
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      left:10px;
+      top: 120px;
+      border-radius:20px;
+
+    }
+
+    .edit-icon{
+      position: absolute;
+      height: 6px;
+      right:40px;
+      top:40px;
+
+    }
+  }
+}
+
+// ------------------------
+// taskを追加するためのcss
+// -------------------------
+
+
+.add-task{
+  margin:30px 0;
+  width: 330px;
+  height:161px;
+  border:1px dashed rgba(0,0,0,.2);
+  border-radius:10px;
+
+
+  .add-task-content{
+    display:block;
+    text-align: center;
+    line-height:161px;
+  }
+}
