@@ -62,7 +62,6 @@ ActiveRecord::Schema.define(version: 2020_09_08_064237) do
     t.bigint "board_id", null: false
     t.string "title", null: false
     t.text "content", null: false
-    t.date "deadline", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["board_id"], name: "index_tasks_on_board_id"
