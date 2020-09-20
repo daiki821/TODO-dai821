@@ -6,27 +6,27 @@
   %h2.title edit
   = form_with(model: @profile, url: profile_path, method: 'put', local: true) do |f|
     %div
-      = f.label :nickname, 'ニックネーム', class: 'first-label'
+      = f.label :nickname, 'ニックネーム', class: 'label'
     %div
-      = f.text_field :nickname, class: 'text text-first'
+      = f.text_field :nickname, class: 'text'
     %div
-      = f.label :introduction,'自己紹介', class: 'second-label'
+      = f.label :introduction,'自己紹介', class: 'label'
     %div
       = f.text_area :introduction, class: 'text text-a'
     %div
-      = f.label :gender,'性別',class: 'p-third-label'
+      = f.label :gender,'性別',class: 'label'
     %div
-      = f.select :gender, Profile.genders.keys,{},{class: 'text p-third-text'}
+      = f.select :gender, Profile.genders.keys,{},{class: 'text'}
     %div
-      = f.label :birthday, '生年月日',class: 'p-four-label'
+      = f.label :birthday, '生年月日',class: 'label'
     %div
-      = f.date_field :birthday, class:'text p-four-text'
+      = f.date_field :birthday, class:'text'
     %div
-      = f.label :subscribed, '通知を受け取る' ,class: 'p-five-label'
-      = f.check_box :subscribed, class:'p-five-text'
+      = f.label :subscribed, '通知を受け取る' ,class: 'inline-label'
+      = f.check_box :subscribed
     %div
-      = f.label :avatar, 'アバター', class: 'p-six-label'
+      = f.label :avatar, 'アバター', class: 'label'
     %div
-      = f.file_field :avatar, class: 'p-six-text'
+      = f.file_field :avatar, class: 'label'
     = f.submit '保存', class: 'btn'
     

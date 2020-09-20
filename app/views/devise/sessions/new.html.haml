@@ -2,13 +2,11 @@
   %h2.title Sign in
   = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
     .field
-      = f.label :email, class: 'first-label'
-      %br/
-      = f.email_field :email, autofocus: true, autocomplete: "email", class: 'text text-first'
+      = f.label :email, class: 'label'
+      = f.email_field :email, autofocus: true, autocomplete: "email", class: 'text'
     .field
-      = f.label :password, class: 'second-label'
-      %br/
-      = f.password_field :password, autocomplete: "current-password", class: 'text text-second'
+      = f.label :password, class: 'label'
+      = f.password_field :password, autocomplete: "current-password", class: 'text'
     .actions
       = f.submit "ログイン", class: 'btn-primary btn'
   -# = render "devise/shared/links"
