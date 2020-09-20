@@ -4,10 +4,16 @@ class BoardsController < ApplicationController
     @boards = Board.all
   end
 
+  def show
+    @board = Board.find(params[:id])
+    @tasks = @board.tasks.all
+  end
+
+
   def new
     @board = current_user.boards.build
-    
   end
+
 
   def create
     @board = current_user.boards.build(board_params)

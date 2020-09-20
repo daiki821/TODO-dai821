@@ -1,6 +1,6 @@
 .container
   %h2.task-title tasks
-  - @tasks.each do |task|
+  - @tasks.each do |task| 
     .task
       .task-content-box
         .task-title
@@ -11,7 +11,6 @@
           = image_tag task.user.user_avatar, class: 'task-icon'
   - if user_signed_in?
     .add-task
-      = link_to new_board_task_path do
+      = link_to new_board_task_path(@board) do
         .add-task-content
           + Add new tasks
-    
