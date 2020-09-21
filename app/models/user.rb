@@ -34,4 +34,8 @@ class User < ApplicationRecord
   def birthday
     profile&.birthday
   end
+
+  def prepare_profile
+    profile || build_profile
+  end
 end

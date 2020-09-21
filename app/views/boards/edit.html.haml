@@ -6,11 +6,11 @@
   %h2.title Edit Board
   = form_with(model: @board, url: board_path(@board), method: 'put', local: true) do |f|
     %div
-      = f.label :title, 'Name',class: 'first-label'
+      = f.label :title, 'Name',class: 'label'
     %div
-      = f.text_field :title, class:'text text-first'
+      = f.text_field :title, class:'text'
     %div
-      = f.label :content, 'Description',class: 'second-label'
+      = f.label :content, 'Description',class: 'label'
     %div
       = f.text_area :content, class: 'text text-a'
     = f.submit '投稿', class: 'btn' 

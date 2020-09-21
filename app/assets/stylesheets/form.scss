@@ -1,89 +1,27 @@
 $input-bgc:#F4F4F4;
 
-
+.label{
+  display:block;
+  margin-bottom: 6px;
+}
+.inline-label{
+  margin-bottom:33px;
+  display:inline-block;
+}
 .text{
   background-color:$input-bgc;
   width: 100%;
   border-radius: 10px;
   height: 40px;
+  margin-bottom:33px;
+  padding:10px;
 }
-.first-label{
-  position: absolute;
-  top: 90px;
-}
-.text-first{
-  position: absolute;
-  top: 120px;
-}
-
-.second-label{
-  position: absolute;
-  top:200px;
-}
-
-.text-second{
-  position: absolute;
-  top: 230px;
-}
-
 
 .text-a{
-  position: absolute;
-  top: 230px;
   height:203px;
 }
 
-.third-label{
-  position: absolute;
-  top: 290px;
-}
 
-.text-third{
-  position: absolute;
-  top: 320px;
-}
-
-// -------------
-// profileのform
-// -------------
-
-
-.p-third-label{
-  position: absolute;
-  top:460px;
-}
-.p-third-text{
-  position: absolute;
-  top:490px;
-}
-
-.p-four-label{
-  position: absolute;
-  top:560px;
-}
-.p-four-text{
-  position: absolute;
-  top:590px;
-}
-.p-five-label{
-  position: absolute;
-  top:650px;
-}
-.p-five-text{
-  position: absolute;
-  top:652px;
-  left:120px;
-}
-
-.p-six-label{
-  position: absolute;
-  top:700px;
-
-}
-.p-six-text{
-  position: absolute;
-  top:730px;
-}
 
 
 

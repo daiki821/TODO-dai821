@@ -3,20 +3,17 @@
   = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
     = render "devise/shared/error_messages", resource: resource
     .field
-      = f.label :email, class: 'first-label'
-      %br/
-      = f.email_field :email, autofocus: true, autocomplete: "email", class: 'text text-first'
+      = f.label :email, class: 'label'
+      = f.email_field :email, autofocus: true, autocomplete: "email", class: 'text'
     .field
-      = f.label :password, class: 'second-label'
+      = f.label :password, class: 'label'
       - if @minimum_password_length
         %em
           -# (#{@minimum_password_length} characters minimum)
-      %br/
-      = f.password_field :password, autocomplete: "new-password", class: 'text text-second'
+      = f.password_field :password, autocomplete: "new-password", class: 'text'
     .field
-      = f.label :password_confirmation, class: 'third-label'
-      %br/
-      = f.password_field :password_confirmation, autocomplete: "new-password",class: 'text text-third'
+      = f.label :password_confirmation, class: 'label'
+      = f.password_field :password_confirmation, autocomplete: "new-password",class: 'text'
     .actions
       = f.submit "登録", class:'btn'
   -# = render "devise/shared/links"
