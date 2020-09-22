@@ -1,1 +1,18 @@
-%p show
+.container
+  %h2.task-title 
+    = @task.title
+  - if @task.eyecatch.attached?
+    .show-image
+      = image_tag @task.eyecatch
+  .show-content-box
+    .show-content
+      = @task.content
+  %h3.comment-title
+  .comment-box
+    .comment-user-image
+    .comment-content
+  - if user_signed_in?
+    .add-task
+      = link_to root_path do
+        .add-task-content
+          + Add new comment
