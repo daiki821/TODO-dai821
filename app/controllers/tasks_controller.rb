@@ -1,6 +1,11 @@
 class TasksController < ApplicationController
   before_action :authenticate_user!
 
+  def show
+   
+  end
+
+  
   def new
     board = Board.find(params[:board_id])
     @task = board.tasks.build(user_id: current_user.id)
