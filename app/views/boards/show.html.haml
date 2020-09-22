@@ -1,14 +1,18 @@
 .container
   %h2.task-title tasks
-  - @tasks.each do |task| 
-    .task
-      .task-content-box
-        .task-title
-          = task.title
-        .task-content
-          = task.content
-        .task-icon-box
-          = image_tag task.user.user_avatar, class: 'task-icon'
+  - @tasks.each do |task|   
+    =link_to board_task_path(task) do
+      .task
+        .task-content-box
+          - if task.eyecatch.attached?
+            .task-image
+              = image_tag task.eyecatch
+          .task-title
+            = task.title
+          .task-content
+            = task.content
+          .task-icon-box
+            = image_tag task.user.user_avatar, class: 'task-icon', alt: 'アイキャッチ画像です'
   - if user_signed_in?
     .add-task
       = link_to new_board_task_path(@board) do
