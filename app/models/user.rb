@@ -38,4 +38,12 @@ class User < ApplicationRecord
   def prepare_profile
     profile || build_profile
   end
+
+  def board_written?(board)
+    boards&.exists?(id: board.id)
+  end
+  
+  def task_written?(task)
+    tasks&.exists?(id: task.id)
+  end
 end

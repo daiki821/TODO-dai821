@@ -10,7 +10,7 @@
             = board.content
           .board-icon-box
             = image_tag board.user.user_avatar, class: 'board-icon'
-          - if current_user&.boards&.exists?(id: board.id)
+          - if current_user&.board_written?(board)
             .dropdown
               = image_tag 'edit.png', class: 'edit-icon' 
               .dropdown-content-box

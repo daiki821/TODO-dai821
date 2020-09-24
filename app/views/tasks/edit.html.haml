@@ -1,0 +1,20 @@
+.container
+  %ul
+    - @task.errors.full_messages.each do |message|
+      %li
+        = message
+  %h2.title Edit Card
+  = form_with(model: @task, url: board_task_path(board_id: @task.board_id, id: @task.id), method: 'put', local: true) do |f|
+    %div
+      = f.label :eyecatch, '画像', class: 'label'
+    %div
+      = f.file_field :eyecatch, class: 'label'
+    %div
+      = f.label :title, 'Name',class: 'label'
+    %div
+      = f.text_field :title, class:'text'
+    %div
+      = f.label :content, 'Description',class: 'label'
+    %div
+      = f.text_area :content, class: 'text text-a'
+    = f.submit '投稿', class: 'btn' 
