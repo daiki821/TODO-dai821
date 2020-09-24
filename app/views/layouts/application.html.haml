@@ -11,7 +11,7 @@
   %body
     %header.header
       .container
-        %h1.h-h1 Boards
+        = link_to 'TodoApp', root_path, class: 'h-h1'
         .dropdown
           - if user_signed_in?
             = image_tag current_user.user_avatar, class: 'header-icon'
