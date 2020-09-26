@@ -15,12 +15,15 @@
     .show-content-box
       .show-content
         = @task.content
-  %h3.comment-title
-  .comment-box
-    .comment-user-image
-    .comment-content
+  %h3.comment-title コメント一覧
+  - @comments.each do |comment|
+    .comment-box
+      .comment-user-image
+        = image_tag comment.user.user_avatar, class: 'icon'
+      .comment-content
+        = comment.content
   - if user_signed_in?
     .add-task
-      = link_to root_path do
+      = link_to new_board_task_comment_path(board_id: @task.board_id, task_id: @task.id) do
         .add-task-content
           + Add new comment
