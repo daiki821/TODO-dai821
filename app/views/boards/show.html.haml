@@ -6,8 +6,8 @@
       .task
         .task-content-box
           - if task.eyecatch.attached?
-            .task-image
-              = image_tag task.eyecatch
+            .task-image-box
+              = image_tag task.eyecatch, class: 'task-image'
           .task-title
             = task.title
           .task-content
