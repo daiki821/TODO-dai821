@@ -17,7 +17,6 @@ $board-color:#F4F4F4;
 .task{
   margin:30px 0;
   width: 330px;
-  // height:161px;
   background-color:$board-color;
   border:1px solid rgba(0,0,0,.1);
   border-radius:10px;
@@ -25,14 +24,11 @@ $board-color:#F4F4F4;
   .task-content-box{
     position: relative;
 
-    .task-image{
-      // width:305px;
-      height:200px;
-      margin:10px;
+    .task-image-box{
+      height: 200px;
+      margin: 10px;
       overflow: hidden;
       border-radius:10px;
-
-    
     }
 
     .task-title{

@@ -1,21 +1,29 @@
 .dropdown{
   position: relative;
   
-  &:hover > .dropdown-content-box{
-    display: block;
-    position: absolute;
-    top:30px;
-    right:20px;
-    background-color:rgb(167, 167, 167);
+ 
+
+    &:hover > .dropdown-content-box{
+      display: block;
+      position: absolute;
+      top:40px;
+      right:10px;
+      background-color:rgb(167, 167, 167);
     }
+  
+    .dropdown-content-box{
+      display: none;
+      padding:10px 20px 10px 10px;
+      border-radius: 5px;
+    }
+  
+    .dropdown-content{
+      display:block;
+      text-align: center;
 
-  .dropdown-content-box{
-    display: none;
-  }
-
-  .dropdown-content{
-    border-bottom: 1px solid #000;
-    display:block;
-    text-align: center;
-  }
+      &:first-of-type{
+        margin-bottom:10px;
+      }
+    }
+  
 }

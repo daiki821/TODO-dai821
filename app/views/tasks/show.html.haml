@@ -3,12 +3,12 @@
     %h2.task-title 
       = @task.title
     -if current_user&.task_written?(@task)
-      .dropdown-box
-        .dropdown
+      .dropdown
+        .dropdown-box
           = image_tag 'edit.png', class: 'edit-icon' 
-          .dropdown-content-box
-            = link_to '編集', edit_board_task_path(board_id: @task.board_id, id: @task.id ),class: 'dropdown-content'
-            = link_to '削除', board_task_path(board_id: @task.board_id, id: @task.id),data:{ method: 'delete', confirm: '本当に削除してもよろしいですか？', class: 'dropdown-content'}
+        .dropdown-content-box
+          = link_to '編集', edit_board_task_path(board_id: @task.board_id, id: @task.id ),class: 'dropdown-content'
+          = link_to '削除', board_task_path(board_id: @task.board_id, id: @task.id),data:{ method: 'delete', confirm: '本当に削除してもよろしいですか？', class: 'dropdown-content'}
     - if @task.eyecatch.attached?
       .show-image
         = image_tag @task.eyecatch
