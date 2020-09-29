@@ -1,6 +1,6 @@
 .container
-  .p-image
-    = image_tag current_user.user_avatar
+  .p-image-box
+    = image_tag current_user.user_avatar, class: 'p-image'
   .p-nickname
     = current_user.nickname
   .p-box

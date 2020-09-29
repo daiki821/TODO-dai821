@@ -1,0 +1,16 @@
+{
+  "name": "todo",
+  "description": "This is todo",
+  "keywords": [],
+  "website": "",
+  "repository": "https://github.com/daiki821/todo-dai821",
+  "env": {},
+  "addons": [
+    "heroku-postgresql:hobby-dev"
+  ],
+  "buildpacks": [{
+    "url": "heroku/nodejs"
+  }, {
+    "url": "heroku/ruby"
+  }]
+}

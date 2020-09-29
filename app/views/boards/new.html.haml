@@ -6,11 +6,11 @@
   %h2.title New Board
   = form_with(model: @board, url: boards_path, method: 'post', local: true) do |f|
     %div
-      = f.label :title, 'Name',class: 'label'
+      = f.label :title, 'タイトル',class: 'label'
     %div
       = f.text_field :title, class:'text'
     %div
-      = f.label :content, 'Description',class: 'label'
+      = f.label :content, '内容',class: 'label'
     %div
       = f.text_area :content, class: 'text text-a'
     = f.submit '投稿', class: 'btn' 
